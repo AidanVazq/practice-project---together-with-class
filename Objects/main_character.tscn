@@ -1,0 +1,27 @@
+[gd_scene load_steps=5 format=3 uid="uid://d34eddcgqoffl"]
+
+[ext_resource type="Script" path="res://Objects/main_character.gd" id="1_jdhfi"]
+[ext_resource type="Texture2D" uid="uid://cedsqhaudlu2" path="res://Assets/character-spritesheet.png" id="1_jxwnl"]
+[ext_resource type="Texture2D" uid="uid://c2wnb70s54ypk" path="res://Objects/Gun_PNG1367.png" id="2_4lw20"]
+
+[sub_resource type="RectangleShape2D" id="RectangleShape2D_5qis3"]
+size = Vector2(64, 115)
+
+[node name="Main Character" type="CharacterBody2D"]
+script = ExtResource("1_jdhfi")
+
+[node name="GunPng1367" type="Sprite2D" parent="."]
+position = Vector2(75, 15)
+rotation = -3.12802
+scale = Vector2(0.0833937, -0.0509477)
+texture = ExtResource("2_4lw20")
+
+[node name="Character-spritesheet" type="Sprite2D" parent="."]
+texture = ExtResource("1_jxwnl")
+hframes = 4
+vframes = 4
+frame = 2
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="."]
+position = Vector2(0, 6.5)
+shape = SubResource("RectangleShape2D_5qis3")
